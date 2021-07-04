@@ -1,3 +1,26 @@
 <resources>
-    <string name="app_name">Food_order</string>
+    <string name="app_name">Jasmintchik</string>
+
+    // Errors
+    <string name="error_message">Something went wrong at out end</string>
+    <string name="retry">Retry</string>
+
+    // Cart Item
+    <string name="add">ADD</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
+    <string name="cart_item">VIEW CART (%s ITEMS)</string>
+    <string name="starter">Starter</string>
+    <string name="inka_restaurent">Inka Restaurent</string>
+    <string name="card_subtitle">5.0 (200+) | ALL days : 09:00 AM - 06:00 PM</string>
+    <string name="card_contact">Reach us at : 9854562142</string>
+    <string name="book_table">BOOK A TABLE</string>
+
+    <string name="place_order">PLACE ORDER</string>
+    <string name="review_orders">Review Orders</string>
+    <string name="total_cost">Total Cost</string>
+    <string name="total_price">€%s</string>
+    <string name="my_cart">My Cart</string>
+    <string name="show_more"><u>Show more</u></string>
+    <string name="show_less"><u>Show less</u></string>
 </resources>
