@@ -36,6 +36,26 @@ class MainViewModel(private val repository : RepositoryImpl): ViewModel() {
         compositeDisposable
     }
 
+    fun gerCartList(){
+        Log.d(TAG, " >>> Received call to get cart list")
+        state = state.copy(loading = true,success = false,failure = false,list = null)
+        compositeDisposable.add(
+            repository.getCartItem()
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe({
+                    state =state.copy(loading = false,success = true,failure = false,list = it)
+                },{
+                    state = state.copy(
+                        loading = false,
+                        failure = true,
+                        success = false,
+                        message = it.localizedMessage
+                    )
+                })
+        )
+    }
+
     private fun publishState(state: MainState) {
         Log.d(TAG," >>> Publish State : $state")
         observableState.postValue(state)
